@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "type": "CASH_OUT",
+    "amount": 85354.69,
+    "fraud_probability": 0.9567,
+    "is_fraud": true,
+    "severity": "CRITICAL",
+    "method": "ml_model",
+    "reasons_count": 5,
+    "timestamp": "2026-04-02 18:28:49"
+  },
+  {
+    "id": 2,
+    "type": "TRANSFER",
+    "amount": 500.0,
+    "fraud_probability": 0.5335,
+    "is_fraud": true,
+    "severity": "MEDIUM",
+    "method": "ml_model",
+    "reasons_count": 2,
+    "timestamp": "2026-04-02 18:34:15"
+  },
+  {
+    "id": 3,
+    "type": "CASH_IN",
+    "amount": 100171.93,
+    "fraud_probability": 0.0037,
+    "is_fraud": false,
+    "severity": "LOW",
+    "method": "ml_model",
+    "reasons_count": 3,
+    "timestamp": "2026-04-02 18:34:38"
+  },
+  {
+    "id": 4,
+    "type": "PAYMENT",
+    "amount": 8290.98,
+    "fraud_probability": 0.0,
+    "is_fraud": false,
+    "severity": "LOW",
+    "method": "ml_model",
+    "reasons_count": 1,
+    "timestamp": "2026-04-02 18:34:48"
+  }
+]

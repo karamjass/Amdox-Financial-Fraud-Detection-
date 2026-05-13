@@ -1,0 +1,92 @@
+{
+  "trained_at": "2026-04-02 18:26:12",
+  "train_time_seconds": 0.83,
+  "dataset": "PaySim1 (Kaggle Synthetic Financial Dataset)",
+  "dataset_source": "Kaggle ealaxi/paysim1",
+  "total_samples_original": 6362620,
+  "total_samples_balanced": 16426,
+  "train_samples": 13140,
+  "test_samples": 3286,
+  "total_fraud": 8213,
+  "fraud_rate_pct": 0.129,
+  "balancing_method": "undersampling",
+  "features": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "balance_diff_orig",
+    "balance_diff_dest",
+    "orig_balance_ratio",
+    "type_CASH_IN",
+    "type_CASH_OUT",
+    "type_DEBIT",
+    "type_PAYMENT",
+    "type_TRANSFER"
+  ],
+  "feature_groups": {
+    "step": "Transaction",
+    "amount": "Transaction",
+    "type_CASH_IN": "Transaction",
+    "type_CASH_OUT": "Transaction",
+    "type_DEBIT": "Transaction",
+    "type_PAYMENT": "Transaction",
+    "type_TRANSFER": "Transaction",
+    "oldbalanceOrg": "Sender",
+    "newbalanceOrig": "Sender",
+    "balance_diff_orig": "Sender",
+    "oldbalanceDest": "Receiver",
+    "newbalanceDest": "Receiver",
+    "balance_diff_dest": "Receiver",
+    "orig_balance_ratio": "Derived"
+  },
+  "transaction_types": [
+    "CASH_IN",
+    "CASH_OUT",
+    "DEBIT",
+    "PAYMENT",
+    "TRANSFER"
+  ],
+  "model_type": "RandomForestClassifier",
+  "model_params": {
+    "n_estimators": 200,
+    "max_depth": 18
+  },
+  "metrics": {
+    "accuracy": 0.9991,
+    "precision": 1.0,
+    "recall": 0.9982,
+    "f1_score": 0.9991,
+    "roc_auc": 1.0
+  },
+  "confusion_matrix": {
+    "true_negative": 1643,
+    "false_positive": 0,
+    "false_negative": 3,
+    "true_positive": 1640
+  },
+  "feature_importances": {
+    "orig_balance_ratio": 0.2664,
+    "balance_diff_orig": 0.2522,
+    "newbalanceOrig": 0.1215,
+    "oldbalanceOrg": 0.0875,
+    "amount": 0.0593,
+    "type_TRANSFER": 0.0463,
+    "type_PAYMENT": 0.0381,
+    "balance_diff_dest": 0.0376,
+    "step": 0.0272,
+    "newbalanceDest": 0.0192,
+    "type_CASH_IN": 0.017,
+    "type_CASH_OUT": 0.0159,
+    "oldbalanceDest": 0.0117,
+    "type_DEBIT": 0.0001
+  },
+  "group_importances": {
+    "Sender": 0.4612,
+    "Derived": 0.2664,
+    "Transaction": 0.2039,
+    "Receiver": 0.0685
+  }
+}
